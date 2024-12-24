@@ -61,7 +61,7 @@ public final class RegionHandler implements Router {
         } else if (configuredRegions.size() == 0)
             configuredRegions.add(
                     new Region(
-                            "os_usa",
+                            "os_asia",
                             DISPATCH_INFO.defaultName,
                             lr(GAME_INFO.accessAddress, GAME_INFO.bindAddress),
                             lr(GAME_INFO.accessPort, GAME_INFO.bindPort)));
@@ -357,7 +357,7 @@ public final class RegionHandler implements Router {
      */
     public static QueryCurrRegionHttpRsp getCurrentRegion() {
         return Grasscutter.getRunMode() == ServerRunMode.HYBRID
-                ? regions.get("os_usa").getRegionQuery()
+                ? regions.get("os_asia").getRegionQuery()
                 : null;
     }
 }
